@@ -1,0 +1,20 @@
+region: WESTPAC
+state: Washington
+stateCode: WA
+mains:
+item: Roasted Turkey,
+description: Whole turkey, infused with Washington’s coastal wood smoke and brushed with a rosemary and sage glaze.
+item: Northwest Salmon with Maple Glaze,
+description: Fresh-caught Pacific salmon, marinated in a maple and soy glaze, then roasted and garnished with lemon and herbs.
+sides:
+item: Wild Mushroom Stuffing,
+description: Stuffing made with crusty sourdough bread, Washington wild mushrooms, leeks, and thyme, foraged from local forests.
+item: Garlic and Herb Mashed Yukon Potatoes,
+description: Creamy mashed Yukon Gold potatoes from the Skagit Valley, whipped with roasted garlic and fresh parsley.
+item: Honey-Glazed Brussels Sprouts with Hazelnuts,
+description: Roasted Brussels sprouts drizzled with Washington wildflower honey and topped with toasted hazelnuts from local orchards.
+item: Rainier Cherry and Cranberry Relish,
+description: A tangy-sweet relish made from Rainier cherries and cranberries, with hints of orange zest and cinnamon.
+desserts:
+item: Apple and Marionberry Crisp,
+description: Warm apple and marionberry crisp with a crumbly oat topping, served with a scoop of vanilla ice cream from a local creamery.

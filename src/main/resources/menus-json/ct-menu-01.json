@@ -1,0 +1,40 @@
+{
+  "mains": [
+    {
+      "item": "Roasted Turkey with Connecticut Spice Rub",
+      "description": "A traditional turkey gets a twist with a spice rub made from local ingredients like bay leaf, allspice, and cayenne pepper."
+    },
+    {
+      "item": "Cider Glazed Ham",
+      "description": "A savory ham glazed with local apple cider for added sweetness."
+    }
+  ],
+  "sides": [
+    {
+      "item": "Maple Glazed Carrots",
+      "description": "Local maple syrup adds a touch of sweetness to this classic side dish."
+    },
+    {
+      "item": "Green Bean Casserole with Bacon and Mushrooms",
+      "description": "A Connecticut favorite, this version includes bacon from nearby farms and wild mushrooms foraged in the state's forests."
+    },
+    {
+      "item": "Sweet Potato Casserole with Marshmallow Topping and Candied Pecans",
+      "description": "This dish combines traditional sweet potato casserole with a Connecticut twist – candied pecans, which are often used in local baked goods."
+    },
+    {
+      "item": "Cornbread Stuffing with Oysters",
+      "description": "A classic stuffing is given a Connecticut touch with the addition of fresh oysters from Long Island Sound. The cornbread base can be made using local cornmeal."
+    }
+  ],
+  "desserts": [
+    {
+      "item": "Pumpkin Pie with Bourbon Whipped Cream",
+      "description": "This classic dessert gets a Connecticut touch with the addition of local bourbon from a distillery in the state."
+    },
+    {
+      "item": "Apple Crisp with Ice Cream",
+      "description": "Connecticut apples are used for this dish, topped with a crispy oat topping and served with locally made ice cream."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+region: WESTPAC
+state: California
+stateCode: CA
+mains:
+item: Herb Roasted Turkey
+description: Juicy turkey slow-roasted with aromatic herbs and spices, offering a subtle smoky flavor.
+item: California Veggie-Stuffed Portobello Steaks,
+description: Grilled Portobello mushrooms stuffed with a vibrant mix of quinoa, avocado, and roasted California vegetables topped with a balsamic glaze.
+sides:
+item: Artisan Sourdough Stuffing
+description: A rustic sourdough stuffing loaded with caramelized onions, celery, fresh herbs, and California dried figs.
+item: Roasted Brussels Sprouts with Garlic Aioli,
+description: Crispy Brussels sprouts roasted to perfection, served with a creamy garlic aioli dipping sauce.
+item: Buttermilk Biscuits with Honey Butter,
+description: Flaky buttermilk biscuits served with honey butter, perfect for sopping up Thanksgiving flavors.
+item: Heirloom Tomato and Burrata Salad,
+description: A refreshing salad with juicy heirloom tomatoes, fresh burrata cheese, and California olive oil, garnished with basil.
+desserts:
+item: Meyer Lemon Tart with Rosemary Crust
+description: A zesty Meyer lemon tart with a buttery rosemary-infused crust, served with a dollop of fresh whipped cream.

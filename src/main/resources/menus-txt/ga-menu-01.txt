@@ -1,0 +1,20 @@
+region: SOUTHERN
+state: Georgia
+stateCode: GA
+mains:
+item: Pecan-Smoked Turkey,
+description: Traditional turkey smoked over Georgia pecan wood, bringing a rich, nutty flavor to the holiday classic.
+item: Peach-Glazed Ham,
+description: Tender ham glazed with Georgia peaches and honey, offering a sweet and savory Southern twist.
+sides:
+item: Cornbread and Pecan Stuffing,
+description: Classic cornbread stuffing with roasted Georgia pecans, celery, and herbs, bringing a taste of the South to the table.
+item: Sweet Potato Casserole with Pecan Streusel,
+description: Creamy sweet potatoes topped with a crunchy pecan streusel, baked to perfection with a hint of cinnamon.
+item: Collard Greens with Smoked Bacon,
+description: Tender, slow-cooked collard greens seasoned with smoked bacon and a touch of vinegar for a savory side.
+item: Buttermilk Biscuits with Honey Butter,
+description: Flaky buttermilk biscuits served with honey butter, perfect for sopping up Thanksgiving flavors.
+desserts:
+item: Peach Cobbler with Vanilla Ice Cream,
+description: Warm Georgia peach cobbler served with a scoop of vanilla ice cream, bringing a comforting end to the meal.
