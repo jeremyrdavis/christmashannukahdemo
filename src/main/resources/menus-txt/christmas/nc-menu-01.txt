@@ -1,0 +1,47 @@
+region: SOUTHERN
+state: North Carolina
+stateCode: NC
+Appetizers:
+dish: Cheerwine BBQ Meatballs
+description: Tender meatballs glazed with Cheerwine-infused barbecue sauce.
+dish: Mini Hush Puppies with Honey Butter
+description: Bite-sized hush puppies served with a side of whipped honey butter.
+dish: Sweet Potato Crostini
+description: Roasted sweet potato rounds topped with goat cheese, pecans, and a drizzle of local honey.
+dish: Pimento Cheese Deviled Eggs
+description: Classic deviled eggs filled with a creamy pimento cheese mixture.
+dish: NC Trout Dip with Crackers
+description: Smoked trout dip made with locally sourced trout and served with crackers.
+dish: Collard Green and Bacon Pinwheels
+description: Flaky pastry rolls filled with seasoned collard greens and crispy bacon.
+dish: Main Finger Foods:
+dish: Pulled Pork Sliders with Lexington BBQ Sauce
+description: Slow-cooked pulled pork served on mini buns with tangy vinegar-based barbecue sauce.
+dish: Fried Chicken and Biscuit Bites
+description: Crispy fried chicken on mini buttermilk biscuits with a dollop of pepper jelly.
+dish: NC-Style Shrimp and Grits Cakes
+description: Mini grits cakes topped with shrimp in a creamy tomato gravy.
+dish: Sweet Potato and Kale Empanadas
+description: Empanadas filled with roasted sweet potatoes, kale, and NC-grown cheese.
+Desserts:
+dish: Mini Blackberry Cobbler
+description: Individual cobblers made with fresh NC blackberries and topped with a dollop of whipped cream.
+dish: Pecan Pralines
+description: Candied pecans in a buttery caramel coating.
+dish: Cheerwine Cupcakes
+description: Cupcakes infused with Cheerwine and topped with cream cheese frosting.
+dish: Moravian Sugar Cookies
+description: Thin, crisp cookies with a rich molasses and spice flavor.
+dish: Sweet Potato Pie Bites
+description: Mini versions of the classic pie with a dollop of whipped cream.
+Beverages:
+dish: Cheerwine Spritzers
+description: Cheerwine soda with a splash of sparkling water and lime.
+dish: Hot Apple Cider
+description: Made with locally grown NC apples and cinnamon.
+dish: Muscadine Wine or Grape Juice
+description: Featuring wine or juice made from NC's native muscadine grapes.
+dish: Sweet Tea Lemonade
+description: A refreshing mix of sweet tea and lemonade with a hint of mint.
+dish: NC Craft Beer Sampler
+description: A selection of craft beers from North Carolina breweries.

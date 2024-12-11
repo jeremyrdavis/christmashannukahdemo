@@ -1,0 +1,48 @@
+region: ATLANTIC
+state: New York
+stateCode: NY
+Appetizers:
+dish: Mini Bagel Bites with Lox and Cream Cheese
+description: Bite-sized bagels topped with cream cheese, smoked salmon, capers, and dill.
+dish: NY White Cheddar and Apple Crostini
+description: Crisp crostini topped with sharp New York white cheddar, apple slices, and honey drizzle.
+dish: Pretzel Bites with Spicy Mustard
+description: Soft, warm pretzel bites served with tangy mustard made with New York State craft beer.
+dish: Mini Eggplant Rollatini
+description: Thinly sliced eggplant stuffed with ricotta and mozzarella, baked with marinara sauce.
+dish: Clams Casino Bites
+description: Local Long Island clams topped with breadcrumbs, bacon, and herbs.
+dish: Apple Cider Glazed Meatballs
+description: Tender meatballs coated in a glaze made with Hudson Valley apple cider.
+Main Finger Foods:
+dish: Mini New York Deli Sliders
+description: Layers of pastrami, Swiss cheese, and pickles on rye bread with spicy mustard.
+dish: NY-Style Mini Pizzas
+description: Bite-sized pizzas with thin crust, marinara, and mozzarella cheese.
+dish: Finger Lakes Chicken Skewers
+description: Grilled chicken skewers marinated with Finger Lakes wine and herbs.
+dish: Potato Knish Bites
+description: Flaky pastry filled with seasoned potato and onion, served warm.
+dish: Fried Long Island Oyster Sliders
+description: Crispy oysters on mini brioche buns with coleslaw and tartar sauce.
+Desserts:
+dish: Mini New York Cheesecakes
+description: Individual cheesecakes with a graham cracker crust, topped with cherry or blueberry sauce.
+dish: Apple Cider Donut Holes
+description: Bite-sized donuts made with Hudson Valley apples, dusted in cinnamon sugar.
+dish: Black and White Cookie Bites
+description: Miniature versions of the iconic New York cookie.
+dish: Cannoli Bites	Small cannoli shells filled with sweet ricotta cream and chocolate chips.
+dish: NY State Maple Fudge
+description: Creamy fudge infused with New York State maple syrup.
+Beverages:
+dish: Manhattan Cocktails
+description: The classic cocktail made with rye whiskey, sweet vermouth, and bitters.
+dish: Hudson Valley Apple Cider
+description: Served chilled or warm with cinnamon sticks.
+dish: New York Egg Cream
+description: A nostalgic soda fountain drink made with milk, seltzer, and chocolate syrup.
+dish: Sparkling Concord Grape
+description: Juice	Made with grapes from the Finger Lakes region.
+dish: NY State Craft Beer or Cider
+description: A selection of brews and ciders from New York breweries and cideries.
