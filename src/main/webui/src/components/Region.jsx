@@ -27,7 +27,7 @@ export default function Region({callback}) {
                         <Label htmlFor="countries" value="Add favorites from your favorite state(s)"/>
                     </div>
                     <Select id="countries" required multiple >
-                        <option value="none" key="none">None</option>
+                        <option value="none" key="none">No thanks</option>
                         {states.map((state) => (
                             <option value={state} key={state}>{state}</option>
                         ))}
