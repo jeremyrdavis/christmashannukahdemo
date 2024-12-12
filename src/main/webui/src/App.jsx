@@ -84,7 +84,7 @@ function App() {
                       {step === 1 && <Register updateWorkflow={registerCelebration}/>}
                       {step === 2 && <Region callback={updateStateCodes}/>}
                       {step === 3 && <Menu menu={menu} invitationCallback={createInvitation}/> }
-                      {step === 4 && <Invitation invitation={invitation} invitationCallback={createPdf}/>}
+                      {step === 4 && <Invitation invitation={invitation} celebration={celebration} invitationCallback={createPdf}/>}
                   </main>
             </Flowbite>
        );

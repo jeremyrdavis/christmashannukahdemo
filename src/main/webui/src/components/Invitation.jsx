@@ -1,6 +1,6 @@
 import {Button, Label, List, Select} from "flowbite-react";
 
-export default function Invitation({ invitation, invitationCallback }) {
+export default function Invitation({ invitation, celebration, invitationCallback }) {
 
         console.log("invitationCallback: ", invitationCallback);
         console.log("Menu: ", invitation.thanksgivingMenu);
@@ -24,10 +24,12 @@ export default function Invitation({ invitation, invitationCallback }) {
                     </div>
                 </div>
                 <Button type="submit">
-                  {invitation.type === "Christmas" ? "Merry Christmas" :
-                   invitation.type === "Hannukah" ? "Happy Hannukah" :
-                   invitation.type === "Festivus" ? "Let the Feats of Strength Begin!" :
-                   "Happy Holidays!"}
+                  {
+                      celebration === "Christmas" ? "Merry Christmas" :
+                      celebration === "Hannukah" ? "Happy Hannukah" :
+                      celebration === "Festivus" ? "Let the Feats of Strength Begin!" :
+                      "Happy Holidays!"
+                  }
                 </Button>
             </form>
         </div>
