@@ -22,13 +22,13 @@ public class RestApiCreateMenuTest {
     public void setup() {
         // Mock the AiService
         Mockito.when(aiService.createMenu(Mockito.any(CreateMenuCommand.class)))
-                .thenReturn(new ThanksgivingMenuRecord("jeremy.davis@redhat.com",
-                                List.of(new ThanksgivingMenuItemRecord("Turkey", "Brined, Oven Roasted"),
-                                        new ThanksgivingMenuItemRecord("Tofurkey", "Vegan")),
-                                List.of(new ThanksgivingMenuItemRecord("Mac & Cheese", "Gooey, Cheesy"),
-                                        new ThanksgivingMenuItemRecord("Green Bean Casserole", "Like Grandma used to make"),
-                                        new ThanksgivingMenuItemRecord("Green Bean Casserole", "Like Grandma used to make")),
-                                List.of(new ThanksgivingMenuItemRecord("Pumpkin Pie", "Classic"))));
+                .thenReturn(new MenuRecord("jeremy.davis@redhat.com",
+                                List.of(new MenuItemRecord("Turkey", "Brined, Oven Roasted"),
+                                        new MenuItemRecord("Tofurkey", "Vegan")),
+                                List.of(new MenuItemRecord("Mac & Cheese", "Gooey, Cheesy"),
+                                        new MenuItemRecord("Green Bean Casserole", "Like Grandma used to make"),
+                                        new MenuItemRecord("Green Bean Casserole", "Like Grandma used to make")),
+                                List.of(new MenuItemRecord("Pumpkin Pie", "Classic"))));
     }
 
 

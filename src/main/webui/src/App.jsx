@@ -15,7 +15,7 @@ function App() {
         const [email, setEmail] = useState("");
         const [celebration, setCelebration] = useState("");
         const [stateCodes, setStateCodes] = useState([]);
-        const [thanksgivingMenu, setThanksGivingMenu] = useState({
+        const [menu, setMenu] = useState({
                 mains: [{
                         "item": "Turkey",
                         "description": "Brined, Oven Roasted"
@@ -66,14 +66,14 @@ function App() {
                 });
                 const data = await response.json();
                 console.log(data);
-                setThanksGivingMenu(data);
+                setMenu(data);
                 setStep(3);
         }
 
         const createInvitation = async () => {
                 console.log("createInvitation");
                 let createInvitationCommand = {
-                        thanksgivingMenuRecord: thanksgivingMenu
+                        menuRecord: menu
                 }
                 console.log("createInvitationCommand: ", JSON.stringify(createInvitationCommand));
                 const response = await fetch(invitationUrl, {
@@ -86,8 +86,7 @@ function App() {
                 });
                 const data = await response.json();
                 console.log("invitation result: " + data);
-                console.log("invitation menu: " + data.thanksgivingMenu);
-//                setInvitation({"invitationUrl": "public/thanksgiving-menu-01.png", thanksgivingMenu});
+                console.log("invitation menu: " + data.menuRecord);
                 setInvitation(data);
                 setStep(4);
         }
@@ -110,7 +109,7 @@ function App() {
               <main className="flex min-h-screen items-center justify-center gap-2 dark:bg-gray-800">
                       {step === 1 && <Register updateWorkflow={registerCelebration}/>}
                       {step === 2 && <Region callback={updateStateCodes}/>}
-                      {step === 3 && <ThanksgivingMenu thanksgivingMenu={thanksgivingMenu} invitationCallback={createInvitation}/> }
+                      {step === 3 && <ThanksgivingMenu thanksgivingMenu={menu} invitationCallback={createInvitation}/> }
                       {step === 4 && <ThanksgivingInvitation invitation={invitation} invitationCallback={createPdf}/>}
                   </main>
             </Flowbite>

@@ -2,7 +2,7 @@ package io.arrogantprogrammer.thanksgivingai.ai;
 
 import dev.langchain4j.model.image.ImageModel;
 import io.arrogantprogrammer.thanksgivingai.api.*;
-import io.arrogantprogrammer.thanksgivingai.domain.ThanksgivingMenu;
+import io.arrogantprogrammer.thanksgivingai.domain.ChristmasMenu;
 import io.arrogantprogrammer.thanksgivingai.rest.OpenAIService;
 import io.quarkus.logging.Log;
 import jakarta.enterprise.context.ApplicationScoped;
@@ -23,9 +23,9 @@ public class AiService {
     @Inject
     ImageModel imageModel;
 
-    public ThanksgivingInvitation createInvitation(final ThanksgivingMenuRecord thanksgivingMenuRecord) {
-        Log.debugf("Creating invitation for %s", thanksgivingMenuRecord);
-        String prompt = ThanksgivingMenu.createInvitationPrompt(thanksgivingMenuRecord);
+    public Invitation createInvitation(final CreateInvitationCommand createInvitationCommand) {
+        Log.debugf("Creating invitation for %s", createInvitationCommand);
+        String prompt = ChristmasMenu.createInvitationPrompt(createInvitationCommand.menuRecord());
 
         var image = imageModel.generate(prompt);
         var uri = image.content().url();
@@ -39,12 +39,12 @@ public class AiService {
         }
         Log.debugf("file://" + file.getAbsolutePath());
 
-        return new ThanksgivingInvitation("/public/" + uuid + ".png", thanksgivingMenuRecord);
+        return new Invitation("/public/" + uuid + ".png", createInvitationCommand.menuRecord());
     }
 
-    public ThanksgivingMenuRecord createMenu(CreateMenuCommand createMenuCommand) {
-        String prompt = ThanksgivingMenu.createPrompt(createMenuCommand.stateCodes());
-        ThanksgivingMenuRecord result = openAIService.chat(prompt);
+    public MenuRecord createMenu(CreateMenuCommand createMenuCommand) {
+        String prompt = ChristmasMenu.createPrompt(createMenuCommand.stateCodes());
+        MenuRecord result = openAIService.chat(prompt);
         Log.debugf("Created menu %s", result);
         return result;
     }

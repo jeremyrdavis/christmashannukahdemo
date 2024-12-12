@@ -1,0 +1,127 @@
+item: Vol-au-Vent
+description: Creamy chicken pastry cups filled with a rich and savory filling, perfect for a holiday appetizer.
+
+item: Cranberry Sauce Meatballs
+description: Tender meatballs simmered in a tangy cranberry sauce, a festive twist on a classic dish.
+
+item: Spinach Artichoke Dip
+description: A creamy dip made with spinach, artichokes, and cheese, served warm with tortilla chips or bread.
+
+item: Bacon Cheese Wreath
+description: A festive wreath-shaped appetizer made with crispy bacon, cream cheese, and fresh herbs.
+
+item: Bruschetta
+description: Toasted baguette slices topped with a flavorful mixture of tomatoes, basil, garlic, and balsamic vinegar.
+
+item: Cranberry Fluff
+description: A sweet and tangy cranberry salad made with fresh cranberries, pineapple, and whipped cream.
+
+item: Savory Cucumber Sandwiches
+description: Light and refreshing thinly-sliced cucumber and dill sandwiches.
+
+item: Roasted Chicken and Brie Holly Mini Bites
+description: Flaky puff pastry filled with roasted chicken, brie cheese, and cranberry sauce, shaped like festive holly leaves.
+
+item: Cheese-Stuffed Cherry Tomatoes
+description: Cherry tomatoes filled with a creamy cheese mixture and topped with fresh herbs.
+
+item: Deviled Eggs
+description: Hard-boiled eggs filled with a creamy yolk mixture, garnished with paprika or fresh herbs.
+
+item: Baked Oysters
+description: Fresh oysters baked with garlic butter and Parmesan cheese, served hot and bubbling.
+
+item: Simmered Smoked Links
+description: Smoked sausages simmered in a flavorful sauce, perfect for serving as a hearty appetizer.
+
+item: Butternut Thyme Tartlets
+description: Mini tartlets filled with roasted butternut squash, caramelized onions, and fresh thyme.
+
+item: Prosciutto-Wrapped Asparagus with Raspberry Sauce
+description: Tender asparagus spears wrapped in prosciutto and served with a sweet raspberry dipping sauce.
+
+item: Air-Fryer Crab au Gratin Spread
+description: A creamy crab dip made with lump crab meat, cheese, and seasonings, cooked to perfection in an air fryer.
+
+item: Sausage Cheese Balls
+description: Savory sausage and cheese balls baked until golden brown and served with a tangy dipping sauce.
+
+item: Pimiento Cheese
+description: A classic Southern spread made with cheddar cheese, mayonnaise, and pimientos, perfect for serving with crackers or vegetables.
+
+item: Appetizer Meatballs
+description: Homemade meatballs simmered in a tangy sauce, perfect for serving as a crowd-pleasing appetizer.
+
+item: Smoked Salmon Bites
+description: Smoked salmon served on cucumber slices with a dollop of dill cream cheese.
+
+item: Brie with Almonds and Cranberries
+description: Creamy brie cheese topped with toasted almonds and cranberry sauce, served with crackers or bread.
+
+item: Cheese Straws
+description: Crispy baked cheese straws made with cheddar cheese and puff pastry, perfect for snacking.
+
+item: Christmas Party Pinwheels
+description: Flaky puff pastry pinwheels filled with a savory mixture of cheese, herbs, and spices.
+
+item: Salmon Dip with Cream Cheese
+description: A creamy dip made with smoked salmon, cream cheese, and fresh herbs, perfect for spreading on crackers or bread.
+
+item: Mini Cheese Balls
+description: Individual cheese balls rolled in nuts, herbs, or spices, served with crackers or bread.
+
+item: Stuffed Mushrooms
+description: Mushroom caps filled with a savory mixture of breadcrumbs, cheese, and herbs, baked until golden and bubbly.
+
+item: Cranberry Cream Cheese Spread
+description: A sweet and tangy spread made with cranberries, cream cheese, and a hint of orange zest.
+
+item: Ham & Brie Pastries
+description: Flaky puff pastry filled with ham, brie cheese, and a touch of honey mustard.
+
+item: Garlic-Parmesan Cheese Ball
+description: A creamy cheese ball rolled in garlic, Parmesan cheese, and fresh herbs, perfect for spreading on crackers or bread.
+
+item: Roasted Beetroot and Garlic Hummus
+description: A vibrant and flavorful hummus made with roasted beets, garlic, and chickpeas, perfect for dipping.
+
+item: Crab Salad Bites
+description: Mini phyllo cups filled with a creamy crab salad, garnished with fresh herbs.
+
+item: Cranberry Brie Pecan Pinwheels
+description: Flaky puff pastry pinwheels filled with cranberry sauce, brie cheese, and toasted pecans.
+
+item: Santa Deviled Eggs
+description: Hard-boiled eggs filled with a creamy yolk mixture and garnished to look like Santa Claus.
+
+item: Hummus
+description: A creamy dip made with chickpeas, tahini, lemon juice, and garlic, perfect for dipping vegetables or pita chips.
+
+item: Pomegranate Pistachio Crostini
+description: Toasted baguette slices topped with a sweet and tangy pomegranate and pistachio mixture.
+
+item: Baked Crab Dip
+description: A warm and creamy crab dip made with lump crab meat, cream cheese, and seasonings, baked until bubbly.
+
+item: Turkey Cranberry Sliders
+description: Mini sandwiches made with roasted turkey, cranberry sauce, and brie cheese, served on slider buns.
+
+item: Cucumber-Stuffed Cherry Tomatoes
+description: Cherry tomatoes filled with a refreshing cucumber salad, perfect for a light and healthy appetizer.
+
+item: Italian Marinated Olives
+description: A mix of olives marinated in olive oil, garlic, herbs, and citrus zest, served with crusty bread or crackers.
+
+item: Christmas Cheese Crisps
+description: Crispy baked cheese crisps made with cheddar cheese, herbs, and spices, perfect for snacking.
+
+
+
+
+
+
+
+
+
+
+

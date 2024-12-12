@@ -7,8 +7,8 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "thanksgiving_menu_item")
-public class ThanksgivingMenuItem extends PanacheEntity {
+@Table(name = "menu_item")
+public class MenuItem extends PanacheEntity {
 
     String item;
 
@@ -20,7 +20,7 @@ public class ThanksgivingMenuItem extends PanacheEntity {
     @Enumerated(EnumType.STRING)
     USRegion region;
 
-    protected ThanksgivingMenuItem() {
+    protected MenuItem() {
     }
 
     public String getItem() {

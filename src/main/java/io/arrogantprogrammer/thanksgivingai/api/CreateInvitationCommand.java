@@ -1,4 +1,4 @@
 package io.arrogantprogrammer.thanksgivingai.api;
 
-public record CreateInvitationCommand(ThanksgivingMenuRecord thanksgivingMenuRecord) {
+public record CreateInvitationCommand(MenuRecord menuRecord) {
 }

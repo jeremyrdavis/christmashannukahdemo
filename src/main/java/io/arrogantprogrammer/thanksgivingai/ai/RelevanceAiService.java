@@ -9,7 +9,7 @@ import io.quarkiverse.langchain4j.guardrails.OutputGuardrail;
 public interface RelevanceAiService extends OutputGuardrail {
 
     @SystemMessage("""
-            You are a response validation system. You will validate whether a Thanksgiving menu makes sense and is appealing.
+            You are a response validation system. You will validate whether a cocktail party menu makes sense and is appealing.
             Validation does not require access to an external system.
             """)
     @UserMessage("""
@@ -24,19 +24,19 @@ public interface RelevanceAiService extends OutputGuardrail {
             0.95
 
             Example 3:
-            menu: Cedar plank roasted turkey
+            menu: Pigs in a Blanket
             0.5
 
             Example 4:
-            menu: Turkey with cranberry sauce
+            menu: Baked Brie with Cranberry Sauce
             0.0
 
             Example 5:
-            menu: Glazed ham
+            menu: Pecan Sandies
             0.0
 
             Example 6:
-            menu: Green bean casserole
+            menu: Cheese Straws
             0.0
 
             Menu: {menu}

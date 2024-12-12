@@ -2,7 +2,6 @@ package io.arrogantprogrammer.thanksgivingai.rest;
 
 import io.arrogantprogrammer.thanksgivingai.api.CreateInvitationCommand;
 import io.quarkus.logging.Log;
-import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
@@ -24,9 +23,9 @@ public class DallEResource {
     public String prompt(CreateInvitationCommand createInvitationCommand) {
         Log.debugf("key: %s", apiKey);
         // feel free to update this message to any question you may have for the LLM.
-        String prompt = "Create a fun and inviting Thanksgiving dinner invitation for friends and family that incorporates the following menu: " + createInvitationCommand.thanksgivingMenuRecord().toString();
+        String prompt = "Create a fun and inviting Thanksgiving dinner invitation for friends and family that incorporates the following menu: " + createInvitationCommand.menuRecord().toString();
         DallERequestRecord requestRecord = new DallERequestRecord(
-                "Create a fun and inviting Thanksgiving dinner invitation for friends and family that incorporates the following menu: " + createInvitationCommand.thanksgivingMenuRecord().toString(),
+                "Create a fun and inviting Thanksgiving dinner invitation for friends and family that incorporates the following menu: " + createInvitationCommand.menuRecord().toString(),
                 "2",
                 "1024x1024");
         Log.debugf("requestRecord: %s", requestRecord);

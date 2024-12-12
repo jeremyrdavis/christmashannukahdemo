@@ -1,0 +1,95 @@
+item: Classic Latkes
+description: No celebration is truly complete without latkes.
+
+item: Roasted Artichokes
+description: Artichokes roasted with garlic and herbs, served with a tangy aioli.
+
+item: Spiced Candied Pecans
+description: Pecans roasted with a blend of spices and a touch of sweetness.
+
+item: Cranberry Whipped Feta Dip
+description: A creamy feta dip blended with tangy cranberries, perfect for spreading on crackers or bread.
+
+item: Cranberry Brie Bites
+description: Flaky puff pastry filled with creamy brie and tangy cranberry sauce.
+
+item: Skordalia
+description: A Greek potato and garlic dip, perfect for spreading on bread or crackers.
+
+item: Tempeh Buffalo “Wings”
+description: Kosher-friendly, plant-based version swaps chicken for snackable triangles of tempeh.
+
+item: Arancini
+description: Crispy fried risotto balls filled with gooey mozzarella cheese and served with marinara sauce.
+
+item: Herby Baked Falafel Bites With Spicy Mint Tahini Dip
+description: Baked falafel bites made with fresh herbs and served with a spicy mint tahini dip.
+
+item: Everything Bagel Dip
+description: A creamy dip flavored with everything bagel seasoning, perfect for dipping bagel chips or veggies.
+
+item: Caramelized Onion & Goat Cheese Bites
+description: Flaky puff pastry filled with caramelized onions and tangy goat cheese.
+
+item: Potato Knish
+description: A classic Jewish pastry filled with seasoned mashed potatoes.
+
+item: Easy Dill Dip
+description: A creamy dill dip perfect for pairing with fresh vegetables or pita chips.
+
+item: Air Fryer Everything Bagel Avocado Fries
+description: Avocado slices coated in everything bagel seasoning and air-fried to crispy perfection.
+
+item: Air Fryer Buffalo Cauliflower
+description: Cauliflower florets coated in a spicy buffalo sauce and air-fried until crispy.
+
+item: Harissa Deviled Eggs
+description: Deviled eggs with a spicy kick from harissa paste and a sprinkle of smoked paprika.
+
+item: Pasta Chips
+description: Crispy pasta chips seasoned with herbs and Parmesan cheese, perfect for snacking.
+
+item: Stuffed Brussels Sprouts
+description: Brussels sprouts stuffed with a savory mixture of breadcrumbs, cheese, and herbs.
+
+item: Brisket Bites
+description: Tender brisket bites slow-cooked in a savory sauce, perfect for snacking or as a main dish.
+
+item: Latke Cups
+description: Crispy latke cups filled with sour cream and smoked salmon, topped with fresh dill.
+
+item: Boursin-Stuffed Mushrooms
+description: Mushroom caps filled with creamy Boursin cheese and baked until golden and bubbly.
+
+item: Giant Skillet Latke
+description: A large latke cooked in a skillet, perfect for sharing and topping with a variety of toppings.
+
+item: Fried Goat Cheese Bites
+description: Breaded and fried goat cheese bites served with a sweet and tangy dipping sauce.
+
+item: Homemade Hummus
+description: Creamy homemade hummus flavored with roasted garlic and lemon, perfect for dipping.
+
+item: Fondue Bites
+description: Bite-sized pieces of bread and vegetables for dipping in a warm, melty cheese fondue.
+
+item: Parmesan Bread Bites
+description: Crispy bread bites seasoned with Parmesan cheese and herbs, perfect for snacking.
+
+item: Homemade Falafel
+description: Crispy homemade falafel made with chickpeas, herbs, and spices, perfect for dipping in tahini sauce.
+
+item: Apple Cheddar Bundles
+description: Flaky puff pastry filled with sweet apples and sharp cheddar cheese, baked until golden.
+
+item: Air Fryer Tahini Black Bean Fritters
+description: Black bean fritters made with tahini and spices, air-fried until crispy and golden.
+
+
+
+
+
+
+
+
+
