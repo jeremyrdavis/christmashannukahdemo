@@ -3,7 +3,7 @@ import { Flowbite } from "flowbite-react";
 import Menu from "./components/Menu.jsx";
 import Region from "./components/Region";
 import Register from "./components/Register";
-import ThanksgivingInvitation from "./components/ThanksgivingInvitation";
+import Invitation from "./components/Invitation.jsx";
 
 const menuUrl = 'http://localhost:8080/static/thanksgiving-menu-01.png';
 const invitationUrl = 'http://localhost:8080/api/ai/invitation';
@@ -84,7 +84,7 @@ function App() {
                       {step === 1 && <Register updateWorkflow={registerCelebration}/>}
                       {step === 2 && <Region callback={updateStateCodes}/>}
                       {step === 3 && <Menu menu={menu} invitationCallback={createInvitation}/> }
-                      {step === 4 && <ThanksgivingInvitation invitation={invitation} invitationCallback={createPdf}/>}
+                      {step === 4 && <Invitation invitation={invitation} invitationCallback={createPdf}/>}
                   </main>
             </Flowbite>
        );

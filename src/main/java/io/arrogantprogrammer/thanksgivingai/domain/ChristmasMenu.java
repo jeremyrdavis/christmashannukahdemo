@@ -38,7 +38,7 @@ public class ChristmasMenu {
             """;
 
     static final String IMAGE_PROMPT = """
-        Create a visual only invitation for a Thanksgiving dinner. Do not include any text.  Use the following menu items when creating the visuals:
+        Create a visual only invitation for a Christmas party. Do not include any text.  You can use the following menu items when creating the visuals:
         """;
 
     public static String createInvitationPrompt(MenuRecord menuRecord) {
