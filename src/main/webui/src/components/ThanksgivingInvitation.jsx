@@ -3,7 +3,7 @@ import {Button, Label, List, Select} from "flowbite-react";
 export default function ThanksgivingInvitation({ invitation, invitationCallback }) {
 
         console.log("invitationCallback: ", invitationCallback);
-        console.log("ThanksgivingMenu: ", invitation.thanksgivingMenu);
+        console.log("Menu: ", invitation.thanksgivingMenu);
         console.log("Invitation URI: ", invitation.url);
         let thanksgivingMenu = invitation.thanksgivingMenu;
 

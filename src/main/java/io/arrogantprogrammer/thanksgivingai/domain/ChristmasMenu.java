@@ -44,17 +44,9 @@ public class ChristmasMenu {
     public static String createInvitationPrompt(MenuRecord menuRecord) {
         StringBuilder stringBuilder = new StringBuilder(IMAGE_PROMPT)
                 .append("\nMains");
-        menuRecord.mains().forEach(main -> {
-            stringBuilder.append("\n- ").append(main.item());
-            stringBuilder.append("\n  ").append(main.description());
-        });
-        menuRecord.sides().forEach(side -> {
-            stringBuilder.append("\n- ").append(side.item());
-            stringBuilder.append("\n  ").append(side.description());
-        });
-        menuRecord.desserts().forEach(dessert -> {
-            stringBuilder.append("\n- ").append(dessert.item());
-            stringBuilder.append("\n  ").append(dessert.description());
+        menuRecord.items().forEach(item -> {
+            stringBuilder.append("\n- ").append(item.item());
+            stringBuilder.append("\n  ").append(item.description());
         });
         stringBuilder.append("\nDo not include any text in the image.  Ignore the \"Revised Prompt\"");
         return stringBuilder.toString();

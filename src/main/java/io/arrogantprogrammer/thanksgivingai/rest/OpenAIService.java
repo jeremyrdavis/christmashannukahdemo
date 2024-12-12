@@ -16,10 +16,10 @@ import jakarta.enterprise.context.ApplicationScoped;
 public interface OpenAIService {
 
     @SystemMessage({
-            "You are a chef specializing in local dishes and ingredients. You are preparing a Thanksgiving feast for your family and friends.",
+            "You are a chef specializing in local dishes and ingredients. You are creating a menu of finger foods for a Christmas cocktail party.",
     })
     @OutputGuardrails(OutputRelevanceGuardrail.class)
     @ToolBox(MenuItemRepository.class)
-    MenuRecord chat(@UserMessage String userMessage);
+    MenuRecord createMenu(@UserMessage String userMessage);
 
 }

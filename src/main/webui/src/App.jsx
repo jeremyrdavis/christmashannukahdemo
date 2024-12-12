@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Flowbite } from "flowbite-react";
-import ThanksgivingMenu from "./components/ThanksgivingMenu";
+import Menu from "./components/Menu.jsx";
 import Region from "./components/Region";
 import Register from "./components/Register";
 import ThanksgivingInvitation from "./components/ThanksgivingInvitation";
@@ -15,33 +15,7 @@ function App() {
         const [email, setEmail] = useState("");
         const [celebration, setCelebration] = useState("");
         const [stateCodes, setStateCodes] = useState([]);
-        const [menu, setMenu] = useState({
-                mains: [{
-                        "item": "Turkey",
-                        "description": "Brined, Oven Roasted"
-                },
-                        {
-                                "item": "Tofurkey",
-                                "description": "Vegan"
-                        }],
-                sides: [                      {
-                        "item": "Mac & Cheese",
-                        "description": "Gooey, Cheesy"
-                },
-                        {
-                                "item": "Green Bean Casserole",
-                                "description": "Like Grandma used to make"
-                        },
-                        {
-                                "item": "Squash",
-                                "description": "Roasted"
-                        }
-                ],
-                desserts: [{
-                        "item": "Pumpkin Pie",
-                        "description": "Traditional"
-                }]
-        });
+        const [menu, setMenu] = useState();
         const [invitation, setInvitation] = useState();
 
         const registerCelebration = async (emailAddress, celebration) => {
@@ -109,7 +83,7 @@ function App() {
               <main className="flex min-h-screen items-center justify-center gap-2 dark:bg-gray-800">
                       {step === 1 && <Register updateWorkflow={registerCelebration}/>}
                       {step === 2 && <Region callback={updateStateCodes}/>}
-                      {step === 3 && <ThanksgivingMenu thanksgivingMenu={menu} invitationCallback={createInvitation}/> }
+                      {step === 3 && <Menu menu={menu} invitationCallback={createInvitation}/> }
                       {step === 4 && <ThanksgivingInvitation invitation={invitation} invitationCallback={createPdf}/>}
                   </main>
             </Flowbite>

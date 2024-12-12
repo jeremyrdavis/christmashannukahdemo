@@ -44,7 +44,7 @@ public class AiService {
 
     public MenuRecord createMenu(CreateMenuCommand createMenuCommand) {
         String prompt = ChristmasMenu.createPrompt(createMenuCommand.stateCodes());
-        MenuRecord result = openAIService.chat(prompt);
+        MenuRecord result = openAIService.createMenu(prompt);
         Log.debugf("Created menu %s", result);
         return result;
     }

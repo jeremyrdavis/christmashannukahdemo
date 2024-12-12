@@ -27,7 +27,7 @@ public class AiServiceTest {
 
     @BeforeEach
     public void setup(){
-        Mockito.when(openAIService.chat(any(String.class))).thenReturn(MockObjects.thanksgivingMenu());
+        Mockito.when(openAIService.createMenu(any(String.class))).thenReturn(MockObjects.thanksgivingMenu());
         Log.infof("Mocked OpenAIService");
     }
 

@@ -30,7 +30,7 @@ public class RagRetriever {
                     @Override
                     public UserMessage inject(List<Content> list, UserMessage userMessage) {
                         StringBuffer prompt = new StringBuffer(userMessage.singleText());
-                        prompt.append("\nUse the following information where state is 'Georgia' or region is 'SOUTHERN' as examples when crafting the menu:\n");
+                        prompt.append("\nUse the following example items when crafting the menu\n");
                         list.forEach(content -> prompt.append("- ").append(content.textSegment().text()).append("\n"));
                         return new UserMessage(prompt.toString());
                     }
