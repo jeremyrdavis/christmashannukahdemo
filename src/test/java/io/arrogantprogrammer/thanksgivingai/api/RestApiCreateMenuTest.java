@@ -24,11 +24,7 @@ public class RestApiCreateMenuTest {
         Mockito.when(aiService.createMenu(Mockito.any(CreateMenuCommand.class)))
                 .thenReturn(new MenuRecord("jeremy.davis@redhat.com",
                                 List.of(new MenuItemRecord("Turkey", "Brined, Oven Roasted"),
-                                        new MenuItemRecord("Tofurkey", "Vegan")),
-                                List.of(new MenuItemRecord("Mac & Cheese", "Gooey, Cheesy"),
-                                        new MenuItemRecord("Green Bean Casserole", "Like Grandma used to make"),
-                                        new MenuItemRecord("Green Bean Casserole", "Like Grandma used to make")),
-                                List.of(new MenuItemRecord("Pumpkin Pie", "Classic"))));
+                                        new MenuItemRecord("Tofurkey", "Vegan"))));
     }
 
 

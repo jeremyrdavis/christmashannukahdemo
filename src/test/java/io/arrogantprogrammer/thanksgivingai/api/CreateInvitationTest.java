@@ -66,11 +66,7 @@ public class CreateInvitationTest {
                 .thenReturn(new Invitation("http://localhost:8080/static/thanksgiving-menu-01.png",
                         new MenuRecord("jeremy.davis@redhat.com",
                                 List.of(new MenuItemRecord("Turkey", "Brined, Oven Roasted"),
-                                        new MenuItemRecord("Tofurkey", "Vegan")),
-                                List.of(new MenuItemRecord("Mac & Cheese", "Gooey, Cheesy"),
-                                        new MenuItemRecord("Green Bean Casserole", "Like Grandma used to make"),
-                                        new MenuItemRecord("Green Bean Casserole", "Like Grandma used to make")),
-                                List.of(new MenuItemRecord("Pumpkin Pie", "Classic")))));
+                                        new MenuItemRecord("Tofurkey", "Vegan")))));
     }
 
     @Test

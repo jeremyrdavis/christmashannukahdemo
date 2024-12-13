@@ -16,7 +16,7 @@ public class MockObjects {
     }
 
     public static MenuRecord thanksgivingMenu() {
-        return new MenuRecord(EMAIL, MockObjects.mains(), MockObjects.sides(), MockObjects.desserts());
+        return new MenuRecord(EMAIL, MockObjects.mains());
     }
 
     public static List<MenuItemRecord> mains() {

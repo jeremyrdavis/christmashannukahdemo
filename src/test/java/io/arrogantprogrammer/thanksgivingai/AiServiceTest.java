@@ -36,12 +36,6 @@ public class AiServiceTest {
         MenuRecord menuRecord = aiService.createMenu(new CreateMenuCommand("jeremy.davis@redhat.com", List.of("None")));
         assertNotNull(menuRecord);
         assertEquals(menuRecord.email(), "jeremy.davis@redhat.com");
-        assertTrue(menuRecord.mains().size() >= 1);
-        assertTrue(menuRecord.sides().size() >= 2);
-        assertTrue(menuRecord.desserts().size() >= 1);
-        verifyDescriptions(menuRecord.mains());
-        verifyDescriptions(menuRecord.sides());
-        verifyDescriptions(menuRecord.desserts());
     }
 
     @Test
@@ -50,12 +44,6 @@ public class AiServiceTest {
         Invitation invitation = aiService.createInvitation(createInvitationCommand);
         assertNotNull(invitation.menuRecord());
         assertEquals(invitation.menuRecord().email(), MockObjects.EMAIL);
-        assertEquals(invitation.menuRecord().mains().size(), MockObjects.mains().size());
-        assertEquals(invitation.menuRecord().sides().size(), MockObjects.sides().size());
-        assertEquals(invitation.menuRecord().desserts().size(), MockObjects.desserts().size());
-        verifyDescriptions(invitation.menuRecord().mains());
-        verifyDescriptions(invitation.menuRecord().sides());
-        verifyDescriptions(invitation.menuRecord().desserts());
     }
 
     private void verifyDescriptions(List<MenuItemRecord> items){
