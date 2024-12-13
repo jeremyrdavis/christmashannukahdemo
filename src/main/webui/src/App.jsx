@@ -28,7 +28,7 @@ function App() {
         const updateStateCodes = async (s) => {
                 console.log("updateStateCodes: states=" + s);
                 console.log("getMenu: states=" + s);
-                let payload = JSON.stringify({email : email, stateCodes: s});
+                let payload = JSON.stringify({email : email, holiday: celebration, stateCodes: s});
                 console.log("payload: ", payload);
                 const response = await fetch(getMenuUrl, {
                         method: 'POST',

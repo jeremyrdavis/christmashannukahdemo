@@ -22,9 +22,9 @@ export default function Register({updateWorkflow}) {
                         <Label htmlFor="celebration" value="Christmas or Hannukah"/>
                     </div>
                     <Select id="celebration" required>
-                        <option>Christmas</option>
-                        <option>Hannukah</option>
-                        <option>Festivus</option>
+                        <option value="CHRISTMAS">Christmas</option>
+                        <option value="HANNUKAH">Hannukah</option>
+                        <option value="FESTIVUS">Festivus</option>
                     </Select>
                 </div>
                 <Button type="submit">Let's Plan My Party!</Button>

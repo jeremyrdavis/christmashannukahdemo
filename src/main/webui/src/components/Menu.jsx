@@ -19,7 +19,7 @@ export default function Menu({ menu: menu, invitationCallback }) {
 
                             {menu.items.map(i =>
                                 <>
-                                <div className="mt-6 text-xl/5 text-cyan-50" key={i.item}>
+                                <div className="mt-6 text-xl/5 text-cyan-50" key={i}>
                                 {i.item}
                                 </div>
                                 <div className="mt-4 text/3 text-cyan-50">
