@@ -27,10 +27,22 @@ public class RestApi {
     @POST
     @Path("/menu")
     public Response createMenu(CreateMenuCommand createMenuCommand) {
+
         Log.debugf("Creating menu for %s", createMenuCommand);
-        MenuRecord menuRecord = aiService.createMenu(createMenuCommand);
-        Log.debugf("Created %s for %s", menuRecord, createMenuCommand);
-        return Response.ok().entity(menuRecord).build();
+
+        if (createMenuCommand.holiday().equals(HOLIDAY.CHRISTMAS)) {
+            MenuRecord menuRecord = aiService.createMenu(createMenuCommand);
+            return Response.ok(menuRecord).build();
+        }else if (createMenuCommand.holiday().equals(HOLIDAY.HANNUKAH)) {
+            MenuRecord menuRecord = aiService.createHannukahMenu(createMenuCommand);
+            return Response.ok(menuRecord).build();
+        }else if (createMenuCommand.holiday().equals(HOLIDAY.FESTIVUS)) {
+            MenuRecord menuRecord = aiService.createMenu(createMenuCommand);
+            return Response.ok(menuRecord).build();
+        }else{
+            Log.errorf("Invalid holiday %s", createMenuCommand.holiday());
+            return Response.status(Response.Status.BAD_REQUEST).entity("Invalid holiday").build();
+        }
     }
 
 }

@@ -3,11 +3,13 @@ package io.arrogantprogrammer.christmashannukah.ai;
 import dev.langchain4j.model.image.ImageModel;
 import io.arrogantprogrammer.christmashannukah.api.*;
 import io.arrogantprogrammer.christmashannukah.domain.ChristmasMenu;
+import io.arrogantprogrammer.christmashannukah.domain.HannukahMenu;
 import io.arrogantprogrammer.christmashannukah.rest.OpenAIService;
 import io.quarkus.logging.Log;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -49,4 +51,10 @@ public class AiService {
         return result;
     }
 
+    public MenuRecord createHannukahMenu(CreateMenuCommand createMenuCommand) {
+        String prompt = HannukahMenu.createPrompt();
+        MenuRecord result = openAIService.createHannukahMenu(prompt);
+        Log.debugf("Created menu %s", result);
+        return result;
+    }
 }

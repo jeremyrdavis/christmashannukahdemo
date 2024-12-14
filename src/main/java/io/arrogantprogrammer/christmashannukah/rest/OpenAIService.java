@@ -22,4 +22,8 @@ public interface OpenAIService {
     @ToolBox(MenuItemRepository.class)
     MenuRecord createMenu(@UserMessage String userMessage);
 
+    @SystemMessage({
+            "You are a chef specializing in local dishes and ingredients. You are creating a menu of finger foods for a Hannukah cocktail party.",
+    })
+    MenuRecord createHannukahMenu(String prompt);
 }
