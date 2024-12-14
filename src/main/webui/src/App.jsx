@@ -47,7 +47,8 @@ function App() {
         const createInvitation = async () => {
                 console.log("createInvitation");
                 let createInvitationCommand = {
-                        menuRecord: menu
+                        menuRecord: menu,
+                        holiday: celebration
                 }
                 console.log("createInvitationCommand: ", JSON.stringify(createInvitationCommand));
                 const response = await fetch(invitationUrl, {

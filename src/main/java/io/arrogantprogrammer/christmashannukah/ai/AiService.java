@@ -1,6 +1,8 @@
 package io.arrogantprogrammer.christmashannukah.ai;
 
+import dev.langchain4j.data.image.Image;
 import dev.langchain4j.model.image.ImageModel;
+import dev.langchain4j.model.output.Response;
 import io.arrogantprogrammer.christmashannukah.api.*;
 import io.arrogantprogrammer.christmashannukah.domain.ChristmasMenu;
 import io.arrogantprogrammer.christmashannukah.domain.HannukahMenu;
@@ -8,8 +10,8 @@ import io.arrogantprogrammer.christmashannukah.rest.OpenAIService;
 import io.quarkus.logging.Log;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+import org.jetbrains.annotations.NotNull;
 
-import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -25,11 +27,20 @@ public class AiService {
     @Inject
     ImageModel imageModel;
 
-    public Invitation createInvitation(final CreateInvitationCommand createInvitationCommand) {
-        Log.debugf("Creating invitation for %s", createInvitationCommand);
-        String prompt = ChristmasMenu.createInvitationPrompt(createInvitationCommand.menuRecord());
+    public Invitation createHannukahInvitation(CreateInvitationCommand createInvitationCommand) {
+        var image = imageModel.generate(HannukahMenu.createInvitationPrompt(createInvitationCommand.menuRecord()));
+        var uuid = getUuid(image);
+        return new Invitation("/public/" + uuid + ".png", null);
+    }
 
-        var image = imageModel.generate(prompt);
+    public Invitation createChristmasInvitation(final CreateInvitationCommand createInvitationCommand) {
+        Log.debugf("Creating invitation for %s", createInvitationCommand);
+        var image = imageModel.generate(ChristmasMenu.createInvitationPrompt(createInvitationCommand.menuRecord()));
+        var uuid = getUuid(image);
+        return new Invitation("/public/" + uuid + ".png", null);
+    }
+
+    private static @NotNull UUID getUuid(Response<Image> image) {
         var uri = image.content().url();
         var desc = image.content().revisedPrompt();
         var uuid = UUID.randomUUID();
@@ -40,8 +51,7 @@ public class AiService {
             throw new RuntimeException(e);
         }
         Log.debugf("file://" + file.getAbsolutePath());
-
-        return new Invitation("/public/" + uuid + ".png", createInvitationCommand.menuRecord());
+        return uuid;
     }
 
     public MenuRecord createMenu(CreateMenuCommand createMenuCommand) {
@@ -52,7 +62,7 @@ public class AiService {
     }
 
     public MenuRecord createHannukahMenu(CreateMenuCommand createMenuCommand) {
-        String prompt = HannukahMenu.createPrompt();
+        String prompt = HannukahMenu.createMenuPrompt();
         MenuRecord result = openAIService.createHannukahMenu(prompt);
         Log.debugf("Created menu %s", result);
         return result;

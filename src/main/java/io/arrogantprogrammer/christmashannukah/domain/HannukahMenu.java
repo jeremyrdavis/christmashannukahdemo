@@ -1,12 +1,27 @@
 package io.arrogantprogrammer.christmashannukah.domain;
 
-import java.util.List;
+import io.arrogantprogrammer.christmashannukah.api.MenuRecord;
 
 public class HannukahMenu {
 
-    public static String createPrompt() {
+
+    public static String createInvitationPrompt(MenuRecord menuRecord) {
+        StringBuilder stringBuilder = new StringBuilder(IMAGE_PROMPT);
+        menuRecord.items().forEach(item -> {
+            stringBuilder.append("\n- ").append(item.item());
+            stringBuilder.append("\n  ").append(item.description());
+        });
+        stringBuilder.append("\nDo not include any text in the image.  Ignore the \"Revised Prompt\"");
+        return stringBuilder.toString();
+    }
+
+    public static String createMenuPrompt() {
         return BASIC_PROMPT;
     }
+
+    static final String IMAGE_PROMPT = """
+        Create a visual only invitation for a Hannukah party. Do not include any text.  Use traditional Hannukah imagery along with any or all of the following finger foods that will be served at the party:
+        """;
 
     static final String BASIC_PROMPT = """
             Create a list of finger foods for a Hannukah party. 

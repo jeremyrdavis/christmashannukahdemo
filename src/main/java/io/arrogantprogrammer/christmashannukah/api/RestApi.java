@@ -19,9 +19,22 @@ public class RestApi {
     @Path("/invitation")
     public Response createInvitation(CreateInvitationCommand createInvitationCommand) {
         Log.debugf("Creating invitation for %s", createInvitationCommand.menuRecord());
-        Invitation invitation = aiService.createInvitation(createInvitationCommand);
-        Log.debugf("Created %s for %s", invitation, createInvitationCommand);
-        return Response.ok(invitation).build();
+        if(createInvitationCommand.holiday().equals(HOLIDAY.CHRISTMAS)){
+            Invitation invitation = aiService.createChristmasInvitation(createInvitationCommand);
+            Log.debugf("Created %s for %s", invitation, createInvitationCommand);
+            return Response.ok(invitation).build();
+        }else if(createInvitationCommand.holiday().equals(HOLIDAY.HANNUKAH)){
+            Invitation invitation = aiService.createHannukahInvitation(createInvitationCommand);
+            Log.debugf("Created %s for %s", invitation, createInvitationCommand);
+            return Response.ok(invitation).build();
+        }else if (createInvitationCommand.holiday().equals(HOLIDAY.FESTIVUS)) {
+            Invitation invitation = aiService.createChristmasInvitation(createInvitationCommand);
+            Log.debugf("Created %s for %s", invitation, createInvitationCommand);
+            return Response.ok(invitation).build();
+        }else{
+            Log.errorf("Invalid holiday %s", createInvitationCommand.holiday());
+            return Response.status(Response.Status.BAD_REQUEST).entity("Invalid holiday").build();
+        }
     }
 
     @POST
