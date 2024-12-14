@@ -5,6 +5,7 @@ import dev.langchain4j.model.image.ImageModel;
 import dev.langchain4j.model.output.Response;
 import io.arrogantprogrammer.christmashannukah.api.*;
 import io.arrogantprogrammer.christmashannukah.domain.ChristmasMenu;
+import io.arrogantprogrammer.christmashannukah.domain.FestivusMenu;
 import io.arrogantprogrammer.christmashannukah.domain.HannukahMenu;
 import io.arrogantprogrammer.christmashannukah.rest.OpenAIService;
 import io.quarkus.logging.Log;
@@ -27,17 +28,23 @@ public class AiService {
     @Inject
     ImageModel imageModel;
 
-    public Invitation createHannukahInvitation(CreateInvitationCommand createInvitationCommand) {
-        var image = imageModel.generate(HannukahMenu.createInvitationPrompt(createInvitationCommand.menuRecord()));
-        var uuid = getUuid(image);
-        return new Invitation("/public/" + uuid + ".png", null);
-    }
-
     public Invitation createChristmasInvitation(final CreateInvitationCommand createInvitationCommand) {
         Log.debugf("Creating invitation for %s", createInvitationCommand);
         var image = imageModel.generate(ChristmasMenu.createInvitationPrompt(createInvitationCommand.menuRecord()));
         var uuid = getUuid(image);
-        return new Invitation("/public/" + uuid + ".png", null);
+        return new Invitation("/public/christmas/" + uuid + ".png", null);
+    }
+
+    public Invitation createHannukahInvitation(CreateInvitationCommand createInvitationCommand) {
+        var image = imageModel.generate(HannukahMenu.createInvitationPrompt(createInvitationCommand.menuRecord()));
+        var uuid = getUuid(image);
+        return new Invitation("/public/hannukah/" + uuid + ".png", null);
+    }
+
+    public Invitation createFestivusInvitation(CreateInvitationCommand createInvitationCommand) {
+        var image = imageModel.generate(FestivusMenu.createInvitationPrompt(createInvitationCommand.menuRecord()));
+        var uuid = getUuid(image);
+        return new Invitation("/public/festivus" + uuid + ".png", null);
     }
 
     private static @NotNull UUID getUuid(Response<Image> image) {
@@ -64,6 +71,13 @@ public class AiService {
     public MenuRecord createHannukahMenu(CreateMenuCommand createMenuCommand) {
         String prompt = HannukahMenu.createMenuPrompt();
         MenuRecord result = openAIService.createHannukahMenu(prompt);
+        Log.debugf("Created menu %s", result);
+        return result;
+    }
+
+    public MenuRecord createFestivusMenu(CreateMenuCommand createMenuCommand) {
+        String prompt = FestivusMenu.createPrompt();
+        MenuRecord result = openAIService.createFestivusMenu(prompt);
         Log.debugf("Created menu %s", result);
         return result;
     }

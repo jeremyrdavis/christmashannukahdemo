@@ -28,7 +28,7 @@ public class RestApi {
             Log.debugf("Created %s for %s", invitation, createInvitationCommand);
             return Response.ok(invitation).build();
         }else if (createInvitationCommand.holiday().equals(HOLIDAY.FESTIVUS)) {
-            Invitation invitation = aiService.createChristmasInvitation(createInvitationCommand);
+            Invitation invitation = aiService.createFestivusInvitation(createInvitationCommand);
             Log.debugf("Created %s for %s", invitation, createInvitationCommand);
             return Response.ok(invitation).build();
         }else{
@@ -50,7 +50,7 @@ public class RestApi {
             MenuRecord menuRecord = aiService.createHannukahMenu(createMenuCommand);
             return Response.ok(menuRecord).build();
         }else if (createMenuCommand.holiday().equals(HOLIDAY.FESTIVUS)) {
-            MenuRecord menuRecord = aiService.createMenu(createMenuCommand);
+            MenuRecord menuRecord = aiService.createFestivusMenu(createMenuCommand);
             return Response.ok(menuRecord).build();
         }else{
             Log.errorf("Invalid holiday %s", createMenuCommand.holiday());

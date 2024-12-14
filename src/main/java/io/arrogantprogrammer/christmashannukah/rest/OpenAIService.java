@@ -26,4 +26,9 @@ public interface OpenAIService {
             "You are a chef specializing in local dishes and ingredients. You are creating a menu of finger foods for a Hannukah cocktail party.",
     })
     MenuRecord createHannukahMenu(String prompt);
+
+    @SystemMessage({
+            "You are a chef specializing in local dishes and ingredients. You are a fan and have a deep knowledge of the classic tv sitcom Seinfeld.  You are creating a menu for a Festivus celebration.",
+    })
+    MenuRecord createFestivusMenu(String prompt);
 }
