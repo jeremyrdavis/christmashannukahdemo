@@ -66,10 +66,6 @@ function App() {
                 setStep(4);
         }
 
-        const createPdf = async () => {
-                console.log("createPdf");
-        }
-
         const logWorkflow = (msg) => {
                 console.log(msg);
                 console.log("email: ", email);
@@ -85,7 +81,7 @@ function App() {
                       {step === 1 && <Register updateWorkflow={registerCelebration}/>}
                       {step === 2 && <Region callback={updateStateCodes}/>}
                       {step === 3 && <Menu menu={menu} invitationCallback={createInvitation}/> }
-                      {step === 4 && <Invitation invitation={invitation} celebration={celebration} invitationCallback={createPdf}/>}
+                      {step === 4 && <Invitation invitation={invitation} celebration={celebration} invitationCallback={createInvitation}/>}
                   </main>
             </Flowbite>
        );

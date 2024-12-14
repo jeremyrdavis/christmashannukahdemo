@@ -8,6 +8,7 @@ import io.arrogantprogrammer.christmashannukah.domain.ChristmasMenu;
 import io.arrogantprogrammer.christmashannukah.domain.FestivusMenu;
 import io.arrogantprogrammer.christmashannukah.domain.HannukahMenu;
 import io.arrogantprogrammer.christmashannukah.rest.OpenAIService;
+import io.arrogantprogrammer.christmashannukah.utils.PDFMaker;
 import io.quarkus.logging.Log;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
@@ -32,7 +33,8 @@ public class AiService {
         Log.debugf("Creating invitation for %s", createInvitationCommand);
         var image = imageModel.generate(ChristmasMenu.createInvitationPrompt(createInvitationCommand.menuRecord()));
         var uuid = getUuid(image);
-        return new Invitation("/public/christmas/" + uuid + ".png", null);
+        PDFMaker.main(new String[]{"/public/invitations/" + uuid + ".pdf"});
+        return new Invitation("/christmas/" + uuid + ".png", null);
     }
 
     public Invitation createHannukahInvitation(CreateInvitationCommand createInvitationCommand) {
