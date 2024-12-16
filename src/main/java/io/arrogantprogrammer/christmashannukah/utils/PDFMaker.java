@@ -6,22 +6,11 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.util.Date;
 
-import com.itextpdf.text.Anchor;
-import com.itextpdf.text.BadElementException;
-import com.itextpdf.text.BaseColor;
-import com.itextpdf.text.Chapter;
-import com.itextpdf.text.Document;
-import com.itextpdf.text.DocumentException;
-import com.itextpdf.text.Element;
-import com.itextpdf.text.Font;
-import com.itextpdf.text.List;
-import com.itextpdf.text.ListItem;
-import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.Phrase;
-import com.itextpdf.text.Section;
+import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
+import io.arrogantprogrammer.christmashannukah.api.CreateInvitationCommand;
 
 public class PDFMaker {
 
@@ -47,11 +36,39 @@ public class PDFMaker {
         }
     }
 
+    public static void createPdfInvitation(CreatePDFCommand createPDFCommand) {
+        String fileName = createPDFCommand.uuid() + ".pdf";
+        try {
+            File pdfFile = createNewFile(fileName);
+            Document document = new Document();
+            PdfWriter.getInstance(document, new FileOutputStream(pdfFile));
+            document.open();
+            setBackgroundColor(document, BaseColor.GREEN);
+            addMetaData(document);
+            addTitlePage(document);
+            addContent(document);
+            document.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public static File createNewFile(String fileName) throws IOException {
         File pdfFile = new File("src/main/webui/public/invitations/" + fileName);
         pdfFile.getParentFile().mkdirs();
         pdfFile.createNewFile();
         return pdfFile;
+    }
+
+    public static void setBackgroundColor(Document document, BaseColor color) {
+        Rectangle pageSize = document.getPageSize();
+        Rectangle background = new Rectangle(pageSize.getLeft(), pageSize.getBottom(), pageSize.getRight(), pageSize.getTop());
+        background.setBackgroundColor(color);
+        try {
+            document.add(background);
+        } catch (DocumentException e) {
+            e.printStackTrace();
+        }
     }
 
 

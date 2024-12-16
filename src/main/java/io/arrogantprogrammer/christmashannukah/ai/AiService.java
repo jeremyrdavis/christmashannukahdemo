@@ -8,6 +8,7 @@ import io.arrogantprogrammer.christmashannukah.domain.ChristmasMenu;
 import io.arrogantprogrammer.christmashannukah.domain.FestivusMenu;
 import io.arrogantprogrammer.christmashannukah.domain.HannukahMenu;
 import io.arrogantprogrammer.christmashannukah.rest.OpenAIService;
+import io.arrogantprogrammer.christmashannukah.utils.CreatePDFCommand;
 import io.arrogantprogrammer.christmashannukah.utils.PDFMaker;
 import io.quarkus.logging.Log;
 import jakarta.enterprise.context.ApplicationScoped;
@@ -32,28 +33,42 @@ public class AiService {
     public Invitation createChristmasInvitation(final CreateInvitationCommand createInvitationCommand) {
         Log.debugf("Creating invitation for %s", createInvitationCommand);
         var image = imageModel.generate(ChristmasMenu.createInvitationPrompt(createInvitationCommand.menuRecord()));
-        var uuid = getUuid(image);
-        PDFMaker.main(new String[]{"/public/invitations/" + uuid + ".pdf"});
-        return new Invitation("/christmas/" + uuid + ".png", null);
+        var uuid = getUuid(image, createInvitationCommand.holiday());
+        CreatePDFCommand createPDFCommand = new CreatePDFCommand("jeremy.davis@redhat.com", createInvitationCommand.menuRecord(), uuid, "/christmas/" + uuid + ".png");
+//        PDFMaker.main(new String[]{"/public/invitations/" + uuid + ".pdf"});
+//        PDFMaker.createPdfInvitation(createPDFCommand);
+        return new Invitation("/public/christmas/" + uuid + ".png", null);
     }
 
     public Invitation createHannukahInvitation(CreateInvitationCommand createInvitationCommand) {
         var image = imageModel.generate(HannukahMenu.createInvitationPrompt(createInvitationCommand.menuRecord()));
-        var uuid = getUuid(image);
+        var uuid = getUuid(image, createInvitationCommand.holiday());
         return new Invitation("/public/hannukah/" + uuid + ".png", null);
     }
 
     public Invitation createFestivusInvitation(CreateInvitationCommand createInvitationCommand) {
         var image = imageModel.generate(FestivusMenu.createInvitationPrompt(createInvitationCommand.menuRecord()));
-        var uuid = getUuid(image);
-        return new Invitation("/public/festivus" + uuid + ".png", null);
+        var uuid = getUuid(image, createInvitationCommand.holiday());
+        return new Invitation("/public/festivus/" + uuid + ".png", null);
     }
 
-    private static @NotNull UUID getUuid(Response<Image> image) {
+    private static @NotNull UUID getUuid(Response<Image> image, HOLIDAY holiday) {
         var uri = image.content().url();
         var desc = image.content().revisedPrompt();
         var uuid = UUID.randomUUID();
-        var file = new File("src/main/webui/public/" + uuid + ".png");
+        String fileName = "src/main/webui/public/" + uuid + ".png";
+        switch (holiday) {
+            case CHRISTMAS -> {
+                fileName = "src/main/webui/public/christmas/" + uuid + ".png";
+            }
+            case HANNUKAH -> {
+                fileName = "src/main/webui/public/hannukah/" + uuid + ".png";
+            }
+            case FESTIVUS -> {
+                fileName = "src/main/webui/public/festivus/" + uuid + ".png";
+            }
+        }
+        var file = new File(fileName);
         try {
             Files.copy(uri.toURL().openStream(), file.toPath(), StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException e) {
